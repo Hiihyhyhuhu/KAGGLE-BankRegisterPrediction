@@ -1,4 +1,4 @@
-# KAGGLE - Bank Register Prediction
+# KAGGLE - Bank Term Deposit Prediction
 
 ## 📌 Project Overview
 
