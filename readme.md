@@ -1,49 +1,139 @@
-# Kaggle Playground Series S5E8: Bank Register Prediction
+# KAGGLE - Bank Register Prediction
 
-This repository contains a machine-learning workflow for the Kaggle competition **[Playground Series - Season 5, Episode 8](https://www.kaggle.com/competitions/playground-series-s5e8)**. The goal is to build predictive models for the competition target and generate high-quality submissions.
+## 📌 Project Overview
 
-## Project Overview
+This project is based on a Kaggle competition about predicting whether a bank client will subscribe to a term deposit using marketing campaign data.
 
-The project is structured to support an end-to-end experimentation loop:
+The dataset comes from a Portuguese banking institution marketing campaign.  
+Each record represents a client contacted during a campaign, and the goal is to build a machine learning model to predict whether the client will subscribe to a term deposit (`yes` / `no`).  
 
-1. Load and inspect competition data.
-2. Build reproducible preprocessing and feature engineering steps.
-3. Train and compare multiple models.
-4. Tune model hyperparameters.
-5. Evaluate with the competition metric.
-6. Export submission files for Kaggle.
+This is a **binary classification problem** commonly used in data science competitions to evaluate feature engineering, preprocessing, and model selection.
 
-## Tech Stack
+Dataset characteristics:
 
-Core dependencies are listed in `requirement.txt`:
+- Mixed categorical & numerical features
+- Imbalanced target variable
+- Real-world marketing data
+- Evaluation based on prediction accuracy / probability
 
-- `pandas`, `numpy` for data processing
-- `scikit-learn` for baseline models and pipelines
-- `xgboost`, `lightgbm` for gradient boosting models
-- `optuna` for hyperparameter optimization
-- `matplotlib`, `seaborn` for exploratory analysis and visualization
+This project includes:
 
-## Setup
+- Data preprocessing
+- Feature engineering
+- Model training
+- Prediction generation
+- Output submission files
+
+Reference: Bank Marketing Dataset / Kaggle competition / UCI dataset  
+The data is related to direct marketing campaigns of a Portuguese bank where the goal is to predict if the client will subscribe a term deposit.  
+
+---
+
+## 📁 Project Structure
+
+KAGGLE-BankRegisterPrediction/
+├── data/                   # Dataset (train / test / processed) — ignored in git
+├── models/                 # Saved trained models (.pkl / .joblib)
+├── output/                 # Prediction results / submission files
+├── src/                    # Core python scripts
+│   ├── __init__.py
+│   ├── data_processing.py  # Cleaning, encoding, feature engineering
+│   ├── train_model.py      # Model training logic
+│   ├── predict.py          # Generate predictions
+│   └── utils.py            # Helper functions / metrics / plots
+├── notebook/               # Jupyter notebooks for experiments / EDA
+├── main.py                 # Entry point for training / inference
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+
+---
+
+## ⚙️ Setup
+
+### 1. Clone repo
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirement.txt
+git clone https://github.com/Hiihyhyhuhu/KAGGLE-BankRegisterPrediction
+cd KAGGLE-BankRegisterPrediction
+```
+### 2. Create environment
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
 ```
 
-## Suggested Repository Workflow
+## 🚀 How to Run
 
-- `data/`: local copies of competition datasets (do not commit raw data)
-- `notebooks/`: exploratory analysis and prototype experiments
-- `src/`: reusable training, inference, and utility code
-- `outputs/`: model artifacts, plots, and submission CSVs
+1. Load dataset
+2. Preprocess data
+3. Train model
+4. Predict test set
+5. Save output file
 
-## Competition Reference
+## 📊 Result
 
-- Kaggle competition page: https://www.kaggle.com/competitions/playground-series-s5e8
+Prediction results are saved in: `output/`
 
-## Notes
 
-- Keep experiments reproducible by fixing random seeds and tracking parameters.
-- Validate locally before submission to avoid leaderboard overfitting.
-- Use Git commits to document changes in features, models, and results.
+
+📈 Methods Used
+
+Data cleaning
+
+Encoding categorical features
+
+Feature selection
+
+Model training
+
+Possible models:
+
+Logistic Regression
+
+Random Forest
+
+XGBoost
+
+SVM
+
+Neural Network
+
+📊 Evaluation
+
+Evaluation metric depends on competition:
+
+Accuracy
+
+ROC-AUC
+
+F1-score
+
+LogLoss
+
+Goal:
+
+Maximize prediction performance on unseen test data
+
+💡 Future Improvements
+
+Hyperparameter tuning
+
+Cross validation
+
+Ensemble models
+
+Feature engineering
+
+Handling imbalance
+
+👤 Author
+
+Tran Chanh Hy
+UTS – Web / AI / Data Science Projects
+
+GitHub:
+https://github.com/Hiihyhyhuhu
