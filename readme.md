@@ -20,7 +20,7 @@ The data is related to direct marketing campaigns of a Portuguese bank where the
 ---
 
 ## 📁 Project Structure
-
+<pre>
 KAGGLE-BankRegisterPrediction/
 ├── data/                   # Dataset (train / test / processed) — ignored in git
 ├── models/                 # Saved trained models (.pkl / .joblib)
@@ -35,7 +35,7 @@ KAGGLE-BankRegisterPrediction/
 ├── main.py                 # Entry point for training / inference
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
-
+</pre>
 ---
 
 ## ⚙️ Setup
@@ -68,31 +68,56 @@ pip install -r requirements.txt
 
 Prediction results are saved in: `output/`
 
-Stacking Evaluation
+<table>
+<tr>
+
+<td align="center" width="50%">
+
+<p>Stacking Evaluation</p>
 <img src="output/stacking_model_evaluation.png" width="400">
 
-<table> <tr> <td align="center">
+</td>
 
-SHAP Summary v2
+<td align="left" width="50%">
+
+<pre>
+Metric          | Score      | Interpretation
+----------------|------------|--------------------------------------------------
+Accuracy        | 0.9205     | Proportion of total correct predictions.
+ROC AUC         | 0.9382     | Ability to distinguish between classes.
+F1 Score        | 0.9159     | Balance between Precision and Recall.
+Precision       | 0.9144     | Accuracy of positive ("Yes") predictions.
+Recall          | 0.9205     | Ability to find all positive ("Yes") cases.
+Log Loss        | 0.1968     | Error based on prediction confidence.
+</pre>
+
+</td>
+
+</tr>
+</table>
+
+
+<table>
+<tr>
+
+<td align="center">
+
+SHAP Summary v2  
 <img src="output/shap_summary_v2.png" width="400">
 
-</td> </tr> <tr> <td align="center">
+</td>
 
-SHAP Summary v4
+<td align="center">
+
+SHAP Summary v4  
 <img src="output/shap_summary_v4.png" width="400">
 
-</td> </tr> </table>
+</td>
 
-Metrics | Score
-:---:|:---:
-accuracy |0.9205
-roc_auc|0.9382
-f1| 0.9159
-precision| 0.9144
-recall| 0.9205
-log_loss| 0.1968
+</tr>
+</table>
 
-💡 Future Improvements
+## 💡 Future Improvements
 
 - Hyperparameter tuning
 - Cross validation
@@ -100,7 +125,7 @@ log_loss| 0.1968
 - Feature engineering
 - Handling imbalance
 
-👤 Author
+## 👤 Author
 
 Tran Chanh Hy
 UTS – Web / AI / Data Science Projects
