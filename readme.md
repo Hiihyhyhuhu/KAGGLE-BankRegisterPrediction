@@ -70,14 +70,14 @@ Prediction results are saved in: `output/`
 <table>
 <tr>
 
-<td align="center" width="70%">
+<td align="center" width="90%">
 
 <p>Stacking Evaluation</p>
 <img src="output/stacking_model_evaluation.png" width="400">
 
 </td>
 
-<td align="left" width="30%">
+<td align="left" width="10%">
 
 <pre>
 Metric      | Score
