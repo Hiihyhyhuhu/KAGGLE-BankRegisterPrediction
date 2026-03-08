@@ -67,7 +67,6 @@ pip install -r requirements.txt
 ## 📊 Result
 
 Prediction results are saved in: `output/`
-
 <table>
 <tr>
 
@@ -81,14 +80,14 @@ Prediction results are saved in: `output/`
 <td align="left" width="50%">
 
 <pre>
-Metric          | Score      | Interpretation
-----------------|------------|--------------------------------------------------
-Accuracy        | 0.9205     | Proportion of total correct predictions.
-ROC AUC         | 0.9382     | Ability to distinguish between classes.
-F1 Score        | 0.9159     | Balance between Precision and Recall.
-Precision       | 0.9144     | Accuracy of positive ("Yes") predictions.
-Recall          | 0.9205     | Ability to find all positive ("Yes") cases.
-Log Loss        | 0.1968     | Error based on prediction confidence.
+Metric      | Score
+------------|--------
+Accuracy    | 0.9205
+ROC AUC     | 0.9382
+F1 Score    | 0.9159
+Precision   | 0.9144
+Recall      | 0.9205
+Log Loss    | 0.1968
 </pre>
 
 </td>
